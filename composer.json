@@ -1,0 +1,52 @@
+{
+    "type": "phpcodesniffer-standard",
+    "name": "thomas-ernest/codeigniter-cs",
+    "description": "An implementation of CodeIgniter's coding convention for PHP_CodeSniffer.",
+    "keywords": [ "phpcs", "standards", "styleguide", "sniffs", "CodeIgniter" ],
+    "homepage": "https://codeigniter.com/userguide3/general/styleguide.html",
+    "license": "proprietary",
+    "time": "2011-02-02",
+    "authors": [
+        {
+            "name": "Thomas ERNEST"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/thomas-ernest/CodeIgniter-for-PHP_CodeSniffer",
+        "issues": "https://github.com/thomas-ernest/CodeIgniter-for-PHP_CodeSniffer/issues"
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "squizlabs/php_codesniffer": "^2.9.1"
+    },
+    "require-dev": {
+        "jakub-onderka/php-parallel-lint": "^0.9.2",
+        "sclable/xml-lint": "^0.2.3"
+    },
+    "suggest" : {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+	},
+    "autoload": {
+        "classmap": [
+            "src/CodeIgniterCodingStandard.php",
+            "src/Sniffs/Commenting/InlineCommentSniff.php",
+            "src/Sniffs/Files/",
+            "src/Sniffs/NamingConventions/",
+            "src/Sniffs/Operators/",
+            "src/Sniffs/Strings/",
+            "src/Sniffs/WhiteSpace/"
+        ]
+    },
+    "scripts": {
+        "test": [
+            "parallel-lint src",
+            "xmllint ."
+        ]
+    },
+    "extra": {
+        "X-dist": {
+            "type": "zip",
+            "url": "https://github.com/thomas-ernest/CodeIgniter-for-PHP_CodeSniffer/archive/master.zip#b501f01403"
+        }
+    }
+}
