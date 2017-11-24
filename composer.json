@@ -40,7 +40,7 @@
     "scripts": {
         "test": [
             "parallel-lint src",
-            "xmllint ."
+            "xmllint --exclude vendor ."
         ]
     },
     "extra": {
